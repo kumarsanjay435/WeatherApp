@@ -1,0 +1,135 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+.DS_Store
+
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring swift specific builds)
+*.xccheckout
+*.moved-aside
+DerivedData/
+.idea/
+*.xcuserstate
+
+## compatibility with Xcode 3 and earlier (ignoring SWIFT generated files)
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+## Issue Reports
+*.xcodeproj/*.xcworkspace/xcshareddata
+
+## Backup files
+# Uncomment the following lines if you are using AppCode IDE
+# *.iml
+# .idea/
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# This is the default behavior in Xcode 10.2 and later.
+# Do not check in Package.resolved as it can cause issues in your CI builds.
+#
+# .package.resolved
+
+.build/
+Package.resolved
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html
+#
+Pods/
+# Uncomment this line if you're using CocoaPods with dependencies
+# *.xcworkspace
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+Carthage/Build/
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repository. Instead, use fastlane to re-generate the 
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+#
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+#
+# Avoid including injections-related files if you're using injection for Xcode.
+# Visit: https://github.com/johnno1962/injectionforxcode
+#
+InjectionLoader/
+
+# Xcode Clones
+#
+# Avoid including clones-related files if you're using Xcode's clones feature.
+.clones/
+
+# SwiftUI Preview
+#
+# Avoid including SwiftUI's preview-related files
+.swiftpm/xcode/outputs/
+
+# Xcode 11 & Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# This is the default behavior in Xcode 10.2 and later.
+#
+.swiftpm/
+
+# Other
+#
+# Exclude archives, core dumps, shared libraries, executable files, etc.
+*.xcscmblueprint
+*.dSYM.zip
+*.dSYM
+*.bcsymbolmap
+*.xcactivitylog
+*.trace
+*.mode1
+*.mode1v3
+*.mode2v3
+*.mode2
+*.perspectivev3
+*.perspective
+*.plist
+*.hmap
+*.ipa
+*.xcfilelist
+*.xcuserstate
+*.moved-aside
+*.xccheckout
+*.hmap
+*.xcscheme
+*.xcodeproj/
+
+# MobileCore
+#
+# Avoid including MobileCore files
+.mobilecore
+
+# AppCenter
+#
+# Avoid including AppCenter files
+.AppCenter/
+
+# Swift Playgrounds
+#
+# Exclude Swift Playgrounds-related files
