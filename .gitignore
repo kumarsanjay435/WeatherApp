@@ -13,6 +13,22 @@
 
 ## User settings
 xcuserdata/
+# Xcode
+*.xcworkspace
+*.xcuserdata
+*.xcuserdatad
+*.xccheckout
+*.xcscmblueprint
+
+# Scheme management
+*.xcscheme
+*.xcschememanagement.plist
+
+# Derived data
+DerivedData/
+
+# Build products
+build/
 
 ## compatibility with Xcode 8 and earlier (ignoring swift specific builds)
 *.xccheckout
