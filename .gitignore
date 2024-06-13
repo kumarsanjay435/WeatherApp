@@ -3,6 +3,14 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 .DS_Store
 
+# Ignore Xcode project user data
+*.xcuserdatad
+*.xcuserdata
+
+# Ignore Xcode scheme management data
+*.xcscheme
+*.xcschememanagement.plist
+
 ## User settings
 xcuserdata/
 
