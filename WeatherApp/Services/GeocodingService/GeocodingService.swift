@@ -7,23 +7,20 @@
 
 import Foundation
 
-protocol GeoCodingServiceProtocol {
-    func fetchLocations(query: String) async throws -> [SearchLocationViewModel.Location]
-}
-
-enum GeocodingServiceError: Error {
-    case invalidURL
-    case responseParseError
-    case networkError(Error)
-    case unknownError
-}
-
 struct GeocodingService: GeoCodingServiceProtocol {
-    private let baseURL = "https://api.openweathermap.org/geo/1.0/direct"
-    private let apiKey = "9a498bdb3bb09723c3ea8a76bc5d61fb"
     
     func fetchLocations(query: String) async throws -> [SearchLocationViewModel.Location] {
-        guard let url = URL(string: "\(baseURL)?appid=\(apiKey)&q=\(query)&limit=8") else {
+        let queryParams: [String: String] = [
+            "appid": apiKey,
+            "q": query,
+            "limit": "\(maxQueryLimit)"
+        ]
+        
+        guard let url = URLBuilder.buildURL(
+            baseURL: baseURL,
+            endpoint: endpoint,
+            queryParams: queryParams
+        ) else {
             throw GeocodingServiceError.invalidURL
         }
         

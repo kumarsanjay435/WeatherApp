@@ -42,6 +42,11 @@
 		108EC96A2C1AD64800D085C9 /* WeatherServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100692D02C1847AD00476E9B /* WeatherServiceMock.swift */; };
 		108EC96B2C1AD64F00D085C9 /* GeoCodingServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100692D52C1864D300476E9B /* GeoCodingServiceMock.swift */; };
 		108EC96C2C1AD65300D085C9 /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100692D32C1864BE00476E9B /* MockLocationManager.swift */; };
+		108EC9732C1BEB4600D085C9 /* ServiceConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC9722C1BEB4500D085C9 /* ServiceConfigurable.swift */; };
+		108EC9752C1BEFF300D085C9 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC9742C1BEFF300D085C9 /* URLBuilder.swift */; };
+		108EC9772C1BF02300D085C9 /* GeoCodingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC9762C1BF02300D085C9 /* GeoCodingServiceProtocol.swift */; };
+		108EC9792C1BF06800D085C9 /* WeatherServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC9782C1BF06800D085C9 /* WeatherServiceProtocol.swift */; };
+		108EC97B2C1BF19400D085C9 /* WeatherTemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC97A2C1BF19400D085C9 /* WeatherTemperatureUnit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +106,11 @@
 		100692E62C19AB7200476E9B /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		100692EF2C1A709C00476E9B /* SearchLocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewModelTests.swift; sourceTree = "<group>"; };
 		108EC9662C1AD34900D085C9 /* WeatherCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCardView.swift; sourceTree = "<group>"; };
+		108EC9722C1BEB4500D085C9 /* ServiceConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfigurable.swift; sourceTree = "<group>"; };
+		108EC9742C1BEFF300D085C9 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		108EC9762C1BF02300D085C9 /* GeoCodingServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCodingServiceProtocol.swift; sourceTree = "<group>"; };
+		108EC9782C1BF06800D085C9 /* WeatherServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceProtocol.swift; sourceTree = "<group>"; };
+		108EC97A2C1BF19400D085C9 /* WeatherTemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTemperatureUnit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +225,7 @@
 		100692C12C156A2D00476E9B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				108EC97C2C1BF2A100D085C9 /* Common */,
 				100692F12C1A7BAC00476E9B /* WeatherService */,
 				100692F22C1A7BBE00476E9B /* GeocodingService */,
 			);
@@ -294,8 +305,10 @@
 		100692F12C1A7BAC00476E9B /* WeatherService */ = {
 			isa = PBXGroup;
 			children = (
+				108EC9782C1BF06800D085C9 /* WeatherServiceProtocol.swift */,
 				100692C62C156B3500476E9B /* WeatherService.swift */,
 				100692BF2C1569B800476E9B /* Weather.swift */,
+				108EC97A2C1BF19400D085C9 /* WeatherTemperatureUnit.swift */,
 			);
 			path = WeatherService;
 			sourceTree = "<group>";
@@ -303,6 +316,7 @@
 		100692F22C1A7BBE00476E9B /* GeocodingService */ = {
 			isa = PBXGroup;
 			children = (
+				108EC9762C1BF02300D085C9 /* GeoCodingServiceProtocol.swift */,
 				100692C22C156A4D00476E9B /* GeocodingService.swift */,
 				100692BD2C1569AF00476E9B /* Location.swift */,
 			);
@@ -316,6 +330,15 @@
 				100692B62C148E3100476E9B /* LocationManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		108EC97C2C1BF2A100D085C9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				108EC9722C1BEB4500D085C9 /* ServiceConfigurable.swift */,
+				108EC9742C1BEFF300D085C9 /* URLBuilder.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +481,9 @@
 				108EC96C2C1AD65300D085C9 /* MockLocationManager.swift in Sources */,
 				100692DD2C199D4100476E9B /* CloseView.swift in Sources */,
 				100692A62C1476A300476E9B /* WeatherCoordinatorView.swift in Sources */,
+				108EC9732C1BEB4600D085C9 /* ServiceConfigurable.swift in Sources */,
+				108EC97B2C1BF19400D085C9 /* WeatherTemperatureUnit.swift in Sources */,
+				108EC9792C1BF06800D085C9 /* WeatherServiceProtocol.swift in Sources */,
 				100692BE2C1569AF00476E9B /* Location.swift in Sources */,
 				100692C52C156A7900476E9B /* NetworkManager.swift in Sources */,
 				100692C02C1569B800476E9B /* Weather.swift in Sources */,
@@ -467,11 +493,13 @@
 				108EC9672C1AD34900D085C9 /* WeatherCardView.swift in Sources */,
 				100692C32C156A4D00476E9B /* GeocodingService.swift in Sources */,
 				100692B12C14829C00476E9B /* SearchLocationViewModel.swift in Sources */,
+				108EC9772C1BF02300D085C9 /* GeoCodingServiceProtocol.swift in Sources */,
 				100692B32C1482EC00476E9B /* WeatherView.swift in Sources */,
 				100692E12C19AB4200476E9B /* FontManager.swift in Sources */,
 				100692DB2C199D3400476E9B /* SearchBarViewModel.swift in Sources */,
 				100692D92C199D1E00476E9B /* SearchBarView.swift in Sources */,
 				100692B52C1482F900476E9B /* SearchLocationView.swift in Sources */,
+				108EC9752C1BEFF300D085C9 /* URLBuilder.swift in Sources */,
 				1006927C2C1447BE00476E9B /* WeatherAppRoot.swift in Sources */,
 				108EC96B2C1AD64F00D085C9 /* GeoCodingServiceMock.swift in Sources */,
 				100692AA2C1477ED00476E9B /* Screen.swift in Sources */,
