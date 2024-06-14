@@ -95,8 +95,17 @@ final class SearchLocationViewModel: ObservableObject {
     }
     
     @MainActor
-    private func handleError(_ error: Error) {
-        self.state = .error(error.localizedDescription)
+    private func handleError(_ error: Error?) {
+        guard let error else {
+            self.state = .error(ServiceError.unknownError.errorMessage)
+            return
+        }
+        
+        if let serviceError = error as? ServiceError {
+            self.state = .error(serviceError.errorMessage)
+        } else {
+            self.state = .error(ServiceError.unknownError.errorMessage)
+        }
     }
     
     @MainActor

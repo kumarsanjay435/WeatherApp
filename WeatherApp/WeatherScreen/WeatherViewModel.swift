@@ -115,14 +115,14 @@ final class WeatherViewModel: ObservableObject {
     @MainActor
     private func handleError(_ error: Error?) {
         guard let error else {
-            setState(.error(WeatherServiceError.unknownError.errorMessage))
+            setState(.error(ServiceError.unknownError.errorMessage))
             return
         }
         
-        if let weatherServiceError = error as? WeatherServiceError {
-            setState(.error(weatherServiceError.errorMessage))
+        if let serviceError = error as? ServiceError {
+            setState(.error(serviceError.errorMessage))
         } else {
-            setState(.error(WeatherServiceError.networkError.errorMessage))
+            setState(.error(ServiceError.networkError.errorMessage))
         }
     }
     

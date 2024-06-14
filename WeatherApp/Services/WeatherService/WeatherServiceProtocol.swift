@@ -21,23 +21,3 @@ extension WeatherServiceProtocol {
         return .metric // default to celcius
     }
 }
-
-enum WeatherServiceError: Error {
-    case invalidURL
-    case responseParseError
-    case networkError
-    case unknownError
-    
-    var errorMessage: String {
-        switch self {
-        case .invalidURL:
-            return "The URL provided was invalid. Please try again later."
-        case .responseParseError:
-            return "There was an issue parsing the weather data. Please try again later."
-        case .networkError:
-            return "There was a network error. Please check your internet connection and try again."
-        case .unknownError:
-            return "An unknown error occurred. Please try again later."
-        }
-    }
-}

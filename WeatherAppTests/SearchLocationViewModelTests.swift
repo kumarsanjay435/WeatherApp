@@ -51,11 +51,11 @@ class SearchLocationViewModelTests: XCTestCase {
     
     func testSearchLocationsFailure() async {
         // Given
-        let error = URLError(.badServerResponse)
+        let error = ServiceError.networkError
         mockGeocodingService.fetchLocationsResult = .failure(error)
         
         // Create an expectation
-        let expectation = XCTestExpectation(description: "Wait for fetchTemperature to complete")
+        let expectation = XCTestExpectation(description: "Wait for searchLocations to complete")
         
         // When
         sut.query = "Invalid Location"
@@ -67,9 +67,9 @@ class SearchLocationViewModelTests: XCTestCase {
         
         // Wait for the expectation with a timeout
         await fulfillment(of: [expectation], timeout: 2.0)
-        
+
         // Then
-        XCTAssertEqual(sut.state, .error(error.localizedDescription))
+        XCTAssertEqual(sut.state, .error(error.errorMessage))
     }
 
     

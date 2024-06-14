@@ -21,10 +21,3 @@ extension GeoCodingServiceProtocol {
         return 8
     }
 }
-
-enum GeocodingServiceError: Error {
-    case invalidURL
-    case responseParseError
-    case networkError(Error)
-    case unknownError
-}

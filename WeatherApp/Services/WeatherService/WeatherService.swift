@@ -18,8 +18,12 @@ struct WeatherService: WeatherServiceProtocol {
             "units": temperatureUnit.rawValue
         ]
         
-        guard let url = URLBuilder.buildURL(baseURL: baseURL, endpoint: endpoint, queryParams: queryParams) else {
-            throw GeocodingServiceError.invalidURL
+        guard let url = URLBuilder.buildURL(
+            baseURL: baseURL,
+            endpoint: endpoint,
+            queryParams: queryParams
+        ) else {
+            throw ServiceError.invalidURL
         }
         
         
@@ -42,11 +46,9 @@ struct WeatherService: WeatherServiceProtocol {
         }
     }
     
-    private func mapError(_ error: Error) -> WeatherServiceError {
-        if error is URLError {
-            return .networkError
-        } else if error is DecodingError {
-            return .responseParseError
+    private func mapError(_ error: Error) -> ServiceError {
+        if let serviceError = error as? ServiceError {
+            return serviceError
         } else {
             return .unknownError
         }

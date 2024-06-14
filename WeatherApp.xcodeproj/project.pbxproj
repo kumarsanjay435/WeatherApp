@@ -47,6 +47,7 @@
 		108EC9772C1BF02300D085C9 /* GeoCodingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC9762C1BF02300D085C9 /* GeoCodingServiceProtocol.swift */; };
 		108EC9792C1BF06800D085C9 /* WeatherServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC9782C1BF06800D085C9 /* WeatherServiceProtocol.swift */; };
 		108EC97B2C1BF19400D085C9 /* WeatherTemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC97A2C1BF19400D085C9 /* WeatherTemperatureUnit.swift */; };
+		108EC97E2C1C043A00D085C9 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108EC97D2C1C043A00D085C9 /* ServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		108EC9762C1BF02300D085C9 /* GeoCodingServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCodingServiceProtocol.swift; sourceTree = "<group>"; };
 		108EC9782C1BF06800D085C9 /* WeatherServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceProtocol.swift; sourceTree = "<group>"; };
 		108EC97A2C1BF19400D085C9 /* WeatherTemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTemperatureUnit.swift; sourceTree = "<group>"; };
+		108EC97D2C1C043A00D085C9 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				108EC9722C1BEB4500D085C9 /* ServiceConfigurable.swift */,
+				108EC97D2C1C043A00D085C9 /* ServiceError.swift */,
 				108EC9742C1BEFF300D085C9 /* URLBuilder.swift */,
 			);
 			path = Common;
@@ -478,6 +481,7 @@
 			files = (
 				100692A82C1476B500476E9B /* WeatherCoordinator.swift in Sources */,
 				100692DF2C199D8400476E9B /* Colors.swift in Sources */,
+				108EC97E2C1C043A00D085C9 /* ServiceError.swift in Sources */,
 				108EC96C2C1AD65300D085C9 /* MockLocationManager.swift in Sources */,
 				100692DD2C199D4100476E9B /* CloseView.swift in Sources */,
 				100692A62C1476A300476E9B /* WeatherCoordinatorView.swift in Sources */,

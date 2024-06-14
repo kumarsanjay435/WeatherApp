@@ -21,7 +21,7 @@ struct GeocodingService: GeoCodingServiceProtocol {
             endpoint: endpoint,
             queryParams: queryParams
         ) else {
-            throw GeocodingServiceError.invalidURL
+            throw ServiceError.invalidURL
         }
         
         do {
@@ -37,10 +37,19 @@ struct GeocodingService: GeoCodingServiceProtocol {
                 )
             }
             return locations
-        } catch let error as GeocodingServiceError {
-            throw error
         } catch {
-            throw GeocodingServiceError.networkError(error)
+            throw mapError(error)
+        }
+    }
+    
+    private func mapError(_ error: Error) -> ServiceError {
+        switch error {
+        case is DecodingError:
+            return .responseParseError
+        case is URLError:
+            return .networkError
+        default:
+            return .unknownError
         }
     }
 }
